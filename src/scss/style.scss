@@ -1,0 +1,12 @@
+$body-bg: green;
+$color: blue;
+
+body {
+    background: $body-bg;
+    color: black;
+}
+
+.abc {
+    background: $body-bg;
+    color: $color;
+}
