@@ -1,12 +1,7 @@
-$body-bg: green;
-$color: blue;
+// 
+// ==========================================================================
+@import "variables";
+@import "reset";
 
-body {
-    background: $body-bg;
-    color: black;
-}
 
-.abc {
-    background: $body-bg;
-    color: $color;
-}
+@import "main";

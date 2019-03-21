@@ -19,7 +19,7 @@ const srcCSS = ROOT + 'src/css/';
 const srcJS = ROOT + 'src/js/';
 
 // Watch Files
-const phpWatchFiles = ROOT + '**/*.php';
+const htmlWatchFiles = ROOT + '**/*.html';
 const sassWatchFiles = ROOT + '**/*.scss';
 
 
@@ -51,24 +51,5 @@ gulp.task('watch', function () {
   });
 
   gulp.watch(sassWatchFiles, gulp.series(['compile-styles']));
-  gulp.watch([sassWatchFiles, phpWatchFiles]).on('change', browserSync.reload)
+  gulp.watch([sassWatchFiles, htmlWatchFiles]).on('change', browserSync.reload)
 });
-
-/* 
-function imgmin() {
-  return gulp.src(imgSRC)
-    .pipe(changed(imgDEST))
-    .pipe(imagemin([
-      imagemin.gifsicle({
-        interlaced: true
-      }),
-      imagemin.jpegtran({
-        progressive: true
-      }),
-      imagemin.optipng({
-        optimizationLevel: 5
-      })
-    ]))
-    .pipe(gulp.dest(imgDEST));
-}
- */
